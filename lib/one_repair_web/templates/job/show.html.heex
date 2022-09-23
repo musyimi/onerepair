@@ -1,0 +1,52 @@
+<p class="flex justify-center font-mono mt-5 text-4xl">Show Job</p>
+
+<ul class="">
+  <li>
+    <strong>Name:</strong>
+    <%= @job.name %>
+  </li>
+
+  <li>
+    <strong>Contact:</strong>
+    <%= @job.contact %>
+  </li>
+
+  <li>
+    <strong>Type:</strong>
+    <%= @job.type %>
+  </li>
+
+  <li>
+    <strong>Imei:</strong>
+    <%= @job.imei %>
+  </li>
+
+  <li>
+    <strong>Fault:</strong>
+    <%= @job.fault %>
+  </li>
+
+  <li>
+    <strong>Estimate:</strong>
+    <%= @job.estimate %>
+  </li>
+
+  <li>
+    <strong>Total:</strong>
+    <%= @job.total %>
+  </li>
+
+  <li>
+    <strong>Comment:</strong>
+    <%= @job.comment %>
+  </li>
+
+  <li>
+    <strong>Technician:</strong>
+    <%= @job.technician %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.job_path(@conn, :edit, @job) %></span> |
+<span><%= link "Back", to: Routes.job_path(@conn, :index) %></span>

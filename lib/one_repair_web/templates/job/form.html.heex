@@ -1,0 +1,89 @@
+<.form let={f} for={@changeset} action={@action} class="mt-10 items-center justify-center ">
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+   <div class="grid grid-cols-12 gap-2">
+     <div class="col-start-2 col-span-10">
+        <%=  label f, :name ,class: "block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"%>
+        <%= text_input f, :name , class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" %>
+        <%= error_tag f, :name %>
+   </div>
+   </div>
+   
+
+    
+   <div class="grid grid-cols-12 gap-2">
+     <div class="col-start-2 col-span-10">
+       <%= label f, :contact ,class: "block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"%>
+      <%= number_input f, :contact , class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"%>
+      <%= error_tag f, :contact %>
+     </div>
+      
+   </div>
+
+   <div class="grid grid-cols-12 gap-2">
+     <div class="col-start-2 col-span-10">
+      <%= label f, :type ,class: "block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"%>
+      <%= text_input f, :type , class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"%>
+      <%= error_tag f, :type %>
+    </div>
+   </div>
+    
+  <div class="grid grid-cols-12 gap-2">
+     <div class="col-start-2 col-span-10">
+      <%= label f, :imei ,class: "block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" %>
+      <%= number_input f, :imei , class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"%>
+      <%= error_tag f, :imei %>
+    </div>
+  </div>
+    
+   <div class="grid grid-cols-12 gap-2">
+     <div class="col-start-2 col-span-10">
+      <%= label f, :fault ,class: "block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"%>
+      <%= text_input f, :fault , class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" %>
+      <%= error_tag f, :fault %>
+    </div>
+   </div> 
+    
+    <div class="grid grid-cols-12 gap-2">
+      <div class="col-start-2 col-span-10">
+      <%= label f, :estimate ,class: "block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"%>
+      <%= number_input f, :estimate , class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"%>
+      <%= error_tag f, :estimate %>
+    </div>
+    </div>
+    
+    <div class="grid grid-cols-12 gap-2">
+      <div class="col-start-2 col-span-10">
+      <%= label f, :total ,class: "block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" %>
+      <%= number_input f, :total , class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"%>
+      <%= error_tag f, :total %>
+    </div>
+    </div>
+    
+    <div class="grid grid-cols-12 gap-2">
+      <div class="col-start-2 col-span-10">
+       <%= label f, :comment ,class: "block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"%>
+      <%= text_input f, :comment , class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"%>
+      <%= error_tag f, :comment %>
+    </div>
+    </div>
+    
+    <div class="grid grid-cols-12 gap-2">
+      <div class="col-start-2 col-span-10">
+      <%= label f, :technician, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" %>
+      <%= text_input f, :technician , class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"%>
+      <%= error_tag f, :technician %>
+    </div>
+    </div>
+    
+  <div class="grid grid-cols-12 gap-2">
+    <div class="col-start-2 col-span-10 mt-3">
+       <%= submit "Save", class: "bg-gray-500 text-gray-50 p-2 rounded border border-gray-300" %>
+    </div>
+  </div>
+  
+</.form>

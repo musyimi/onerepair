@@ -1,0 +1,45 @@
+<h1 class="flex justify-center font-mono text-4xl mt-5 mb-5">Listing Jobs</h1>
+
+<div class="ml-4">
+  <table class="table-auto  text-sm text-left text-gray-500 dark:text-gray-400">
+  <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    <tr>
+      <th scope="col" class="py-3 px-6">Name</th>
+      <th scope="col" class="py-3 px-6">Contact</th>
+      <th scope="col" class="py-3 px-6">Type</th>
+      <th scope="col" class="py-3 px-6">Imei</th>
+      <th scope="col" class="py-3 px-6">Fault</th>
+      <th scope="col" class="py-3 px-6">Estimate</th>
+      <th scope="col" class="py-3 px-6">Total</th>
+      <th scope="col" class="py-3 px-6">Comment</th>
+      <th scope="col" class="py-3 px-6">Technician</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for job <- @jobs do %>
+    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+      <td class="py-4 px-6"><%= job.name %></td>
+      <td class="py-4 px-6"><%= job.contact %></td>
+      <td class="py-4 px-6"><%= job.type %></td>
+      <td class="py-4 px-6"><%= job.imei %></td>
+      <td class="py-4 px-6"><%= job.fault %></td>
+      <td class="py-4 px-6"><%= job.estimate %></td>
+      <td class="py-4 px-6"><%= job.total %></td>
+      <td class="py-4 px-6"><%= job.comment %></td>
+      <td class="py-4 px-6"><%= job.technician %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.job_path(@conn, :show, job), class: "bg-amber-300 text-slate-50 p-2 rounded" %></span>
+        <span><%= link "Edit", to: Routes.job_path(@conn, :edit, job),class: "bg-green-500 text-slate-50 p-2 rounded" %></span>
+        <span><%= link "Delete", to: Routes.job_path(@conn, :delete, job), method: :delete, data: [confirm: "Are you sure?"], class: "bg-red-500 text-slate-50 p-2 rounded" %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+</div>
+
+
+<span><%= link "New Job", to: Routes.job_path(@conn, :new) %></span>

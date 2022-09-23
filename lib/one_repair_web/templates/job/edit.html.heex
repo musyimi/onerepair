@@ -1,0 +1,5 @@
+<p class="flex justify-center mt-5 font-mono text-4xl">Edit Job</p>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.job_path(@conn, :update, @job)) %>
+
+<span><%= link "Back", to: Routes.job_path(@conn, :index) %></span>
